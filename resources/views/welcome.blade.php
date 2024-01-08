@@ -23,7 +23,17 @@
 
                     <div class="flex mt-4">
                         <a href="{{ route('products.show', ['id' => $product->id]) }}" class="mr-2 text-blue-500 hover:underline">View Details</a>
+<<<<<<< HEAD
                   
+=======
+                        <a href="{{ route('products.edit', ['id' => $product->id]) }}" class="mr-2 text-yellow-500 hover:underline">Edit</a>
+                        <form action="{{ route('products.destroy' )}}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $product->id }}" >
+                            <button type="submit" class="text-red-500 hover:underline">Delete</button>
+
+                        </form>
+>>>>>>> 239395689475b8147e093960c2a2cdb61b18a585
                     </div>
                 </div>
             </div>
