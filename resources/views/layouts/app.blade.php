@@ -12,20 +12,23 @@
     <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-14 bg-blue-500 text-white p-4">
         <div class="ml-4">
             @guest
-            <a href="{{ route('login') }}" class="mr-4">Login</a>
-            <a href="{{ route('register') }}">Register</a>
+                <a href="{{ route('login') }}" class="mr-4">Login</a>
+                <a href="{{ route('register') }}">Register</a>
             @endguest
-            
+
             @auth
-            <form action="/logout" method="post" class="inline-block">
-                @csrf
-                <button type="submit" class="ml-4">Logout</button>
-            </form>
+                <form action="/logout" method="post" class="inline-block">
+                    @csrf
+                    <button type="submit" class="ml-4">Logout</button>
+
+                </form>
+                <a href="{{ route('dashboard') }}">dashboard</a>
+
             @endauth
         </div>
     </header>
 
-    <main class="container mx-auto mt-20 mb-20 p-4">
+    <main class="container  mt-20 mb-20 p-4">
         @yield('main')
     </main>
 
