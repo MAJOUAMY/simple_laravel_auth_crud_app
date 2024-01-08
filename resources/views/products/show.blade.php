@@ -14,7 +14,7 @@
             </div>
 
             <div class="mb-4">
-                <strong>Created by:</strong> {{ $product->user->name }} 
+                <strong>Created by:</strong> {{ $product->user->username }} 
             </div>
 
             
